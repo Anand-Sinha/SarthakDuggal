@@ -1,0 +1,256 @@
+/* BASIC SETUP*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: lighter;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 200;
+}
+
+/* PORTFOLIO*/
+.portfolio {
+  color: white;
+  background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* Adds the space between two contents */
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 150%;
+  font-style: italic;
+}
+
+.page {
+  min-height: 90vh;
+  /* specifies the number of grids */
+}
+
+.hero {
+  height: 400px;
+  width: 400px;
+  margin-right: 0;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 10px 10px 10px black;
+}
+
+.pho {
+  float: left;
+}
+
+.tbe {
+  border-bottom: solid white;
+}
+
+.pho1 {
+  float: right;
+}
+
+.photographer .details {
+  width: 30%;
+  margin: auto;
+  position: relative;
+  top: 110px;
+  left: 50px;
+}
+
+.hair-stylist .details {
+  width: 30%;
+  margin: auto;
+  position: relative;
+  top: 110px;
+  left: 50px;
+}
+
+#pagetwo {
+  position: relative;
+  top: 500px;
+}
+
+.chef {
+  background: rgb(0, 0, 0, 0.3);
+}
+
+.chef .details {
+  width: 30%;
+  margin: auto;
+  position: relative;
+  top: 110px;
+  right: 50px;
+}
+
+.chef .imggg {
+  position: relative;
+  right: 300px;
+}
+
+.imggg {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.hero:hover::before {
+  content: attr(data-tooltip);
+}
+
+.hero img {
+  transform: scale(1.4);
+  opacity: 0.5;
+  box-shadow: inset 3px 3px 10px 0 #000000;
+}
+
+.hero img:hover {
+  cursor: pointer;
+  animation: hero 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes hero {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+}
+
+.details {}
+
+.details h1 {
+  font-size: 350%;
+  font-family: "Montserrat";
+}
+
+.details h2 {
+  font-size: 150%;
+  padding: 20px 0px;
+}
+
+.pages {
+  overflow: hidden;
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+.pages>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages h3 {
+  font-size: 110%;
+  padding: 30px;
+}
+
+.pages svg {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.pages svg.active {
+  opacity: 1;
+}
+
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:769px) {
+  .pho {
+    transform: scale(0.5);
+    float: none;
+    position: relative;
+    right: 90px;
+  }
+
+  .photographer .details {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: -60px;
+    left: -25px;
+  }
+
+  .details h1 {
+    font-size: 150%;
+  }
+
+  .details h2 {
+    font-size: 100%;
+  }
+
+  .details p {
+    font-size: 80%;
+  }
+
+  .chef .details {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: -60px;
+    left: -25px;
+  }
+
+  .chef .imggg {
+    position: relative;
+    right: 0;
+  }
+
+  .pho1 {
+    transform: scale(0.5);
+    float: none;
+    position: relative;
+    right: 90px;
+  }
+
+  .hair-stylist .details {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: -60px;
+    left: -25px;
+  }
+
+  #pagetwo {
+    position: relative;
+    top: 0px;
+  }
+}
